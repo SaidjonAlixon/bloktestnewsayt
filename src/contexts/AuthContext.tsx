@@ -105,6 +105,9 @@ const initializeDefaultUsers = () => {
       maxTestAttempts: -1, // Unlimited for admin
       allowedDirections: [],
       createdAt: new Date().toISOString(),
+      achievements: [],
+      totalScore: 0,
+      rank: 0
     };
     
     const updatedUsers = [defaultAdmin, ...existingUsers];
@@ -126,6 +129,9 @@ const initializeDefaultUsers = () => {
       maxTestAttempts: 1, // Only free test
       allowedDirections: [],
       createdAt: new Date().toISOString(),
+      achievements: [],
+      totalScore: 0,
+      rank: 0
     };
     
     const allUsers = getStoredUsers();
@@ -228,6 +234,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         maxTestAttempts: 1, // Only free test initially
         allowedDirections: [],
         createdAt: new Date().toISOString(),
+        achievements: [],
+        totalScore: 0,
+        rank: 0
       };
 
       const updatedUsers = [...users, newUser];
